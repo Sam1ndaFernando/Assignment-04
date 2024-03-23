@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+
         .button-container {
             text-align: center;
             position: absolute;
@@ -16,14 +17,43 @@
             display: inline-block;
             margin: 10px;
             text-decoration: none;
-            background-color: #5356FF;
-            color: #fff;
+            background-color: rgba(255, 255, 255, 0.3); /* White with 30% opacity */
+            color: #fff; /* White text color */
             padding: 10px 20px;
             border-radius: 10px;
         }
+
+        :root {
+             --gradient: linear-gradient(-45deg, #be185d, #ec4899, #d946ef, #0ea5e9);
+         }
+
+        body {
+            font-family: "Alexandria", sans-serif;
+        }
+
+        .main {
+            background: #ddd;
+            background-size: 300%;
+            background-image: var(--gradient);
+            animation: bg-animation 20s infinite;
+        }
+
+        @keyframes bg-animation {
+            0% {
+                background-position: left;
+            }
+            50% {
+                background-position: right;
+            }
+            100% {
+                background-position: left;
+            }
+        }
+
     </style>
+
 </head>
-<body>
+<body class="min-h-screen w-full flex justify-center items-center p-4 main">
 <div class="button-container">
     <a href="Case-01/index.html" target="_blank">Case 01</a>
     <a href="Case-02/index.html" target="_blank">Case 02</a>
